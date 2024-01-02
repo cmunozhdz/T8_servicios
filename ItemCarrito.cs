@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace TiendaServices
 {
+    /// <summary>
+    /// Almacena la información de cada item que forma parte del carrito.
+    /// </summary>
     internal class ItemCarrito
     {
         public int _IdCarrito;

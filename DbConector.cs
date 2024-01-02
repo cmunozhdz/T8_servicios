@@ -22,6 +22,8 @@ namespace TiendaServices
 
         /// <summary>
         /// Constructor para inicializar variables.
+        /// Leyendo los datos de la variable de configuraacion
+        /// cuando se hace el despliege en azure lo seteamos en la pantalla configuracion.
         /// </summary>
         public DbConector() {
         /*Server= "t8-2020630308-bd.mysql.database.azure.com";
@@ -36,7 +38,8 @@ namespace TiendaServices
             DB = Environment.GetEnvironmentVariable("Database");
         }
         /// <summary>
-        /// Intenta la conexion a la base de datos. 
+        /// Intenta la conexion a la base de datos, devuelve null si la conexion falla
+        /// Para leer el error en la conexion debes invocar el metodo getmessage
         /// </summary>
         /// <returns></returns>
         public MySqlConnection Conexion() {
@@ -68,7 +71,7 @@ namespace TiendaServices
             return _con;
         }
         /// <summary>
-        ///  Devuelve el valor del mensaje de la conexion.
+        ///  Devuelve el valor del mensaje de error al establecer conexion.
         /// </summary>
         /// <returns></returns>
         public String GetMessage()

@@ -17,7 +17,11 @@ namespace TiendaServices
         {
             _logger = loggerFactory.CreateLogger<FnGetArticulo>();
         }
-
+        /// <summary>
+        /// Consulta el catalogo de articulos.
+        /// </summary>
+        /// <param name="req">Id: Clave del articulo a buscar</param>
+        /// <returns></returns>
         [Function("FnGetArticulo")]
         public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req)
         {
