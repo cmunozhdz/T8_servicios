@@ -16,6 +16,6 @@ namespace TiendaServices
         public double Precio;
         public String Archivo;
         public byte[] Foto ;
-        public String SFoto; // conversio de foto a string 
+        public String SFoto; // conversion de foto a string 
     }
 }
